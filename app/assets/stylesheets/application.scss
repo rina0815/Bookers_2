@@ -17,18 +17,18 @@
 @import "bootstrap";
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333333;
-    background-color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333333;
+  margin-top: 51px;
+  background-color: #fff;
 }
 
 header {
   color: white;
 }
 
-.navbar {
+navbar {
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
@@ -46,7 +46,6 @@ header .navbar-left span {
   padding-right: 15px;
 }
 
-
 #notice {
   color: green;
 }
@@ -55,6 +54,9 @@ p, ol, ul, td {
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
+}
+p {
+  margin: 0 0 10px;
 }
 
 .table>thead>tr>th, .table>thead>tr>td, .table>tbody>tr>th, .table>tbody>tr>td, .table>tfoot>tr>th, .table>tfoot>tr>td {
@@ -77,10 +79,6 @@ h1, .h1 {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-}
-
-p {
-  margin: 0 0 10px;
 }
 
 .body {
