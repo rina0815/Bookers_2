@@ -20,53 +20,54 @@
           </tr>
         </tbody>
         <div class="row">
-            <!-- /users/id/editのリンクを張る↓ -->
-            <a class="col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_21696" href="/users/21696/edit"></a>
+          <!-- /users/id/editのリンクを張る↓ -->
+          <a class="col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_21696" href="/users/21696/edit"></a>
         </div>
         <!-- ここまでユーザー情報 -->
 
         <h2>New book</h2>
         <!-- ここからが投稿ページ -->
         <!-- form_for記入 -->
-          <div class="field row">
-            <label for="book_title">Title</label>
-              <input class="col-xs-12 book_title" type="text" name="book[title]" id="book_title">
-          </div>
-          <div class="field row">
-            <label for="book_opinion">Opinion</label>
-          </div>
-          <div class="actions row">
-            <input type="submit" name="commit" value="Create Book" class="btn btn-primary col-xs-12" data-disable-with="Create Book">
-          </div>
-        <!-- ここまで投稿ページ -->
+        <div class="field row">
+          <label for="book_title">Title</label>
+            <input class="col-xs-12 book_title" type="text" name="book[title]" id="book_title">
+        </div>
+        <div class="field row">
+          <label for="book_opinion">Opinion</label>
+        </div>
+        <div class="actions row">
+          <input type="submit" name="commit" value="Create Book" class="btn btn-primary col-xs-12" data-disable-with="Create Book">
+        </div>
       </div>
-<!-- 右側ページ -->
-  <div class="col-xs-9">
-    <h2>Books</h2>
+      <!-- 右側ページ -->
+      <div class="col-xs-9">
+        <h2>Users</h2>
+        <table class="table table-hover table-inverse">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Title</th>
+              <th>Opinion</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
-    <table class="table table-hover table-inverse">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Title</th>
-      <th>Opinion</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-      <tr>
-        <td>
-          <!-- userアイコン&rリンク挿入 -->
-          <img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg" alt="No image icon">
-        </td>
-        <td>
-          <!-- Title -->
-        </td>
-        <td>
-          <!-- Opinion -->
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          <tbody>
+            <tr>
+              <td>
+                <!-- userアイコン&rリンク挿入 -->
+                <img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg" alt="No image icon">
+              </td>
+              <td>
+                <!-- Title -->
+              </td>
+              <td>
+                <!-- Opinion -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>

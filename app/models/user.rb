@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :name,
   length: { minimum: 2, maximum: 20, message: "is too short (minimum is 2 characters)" }
+
+  has_many :books, dependent: :destroy
 end
