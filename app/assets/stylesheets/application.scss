@@ -60,6 +60,12 @@ p, ol, ul, td {
   margin: 33px;
 }
 
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
 p {
   margin: 0 0 10px;
 }
@@ -105,6 +111,9 @@ a:visited {
   color: #666;
 }
 
+a:hover {
+  background-color: black;
+}
 .btn-success {
   color: #fff;
   background-color: #5cb85c;

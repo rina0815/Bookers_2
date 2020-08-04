@@ -18,6 +18,7 @@
     <div class="row">
       <div class="col-xs-3">
         <h2>User info</h2>
+
         <!-- user画像の情報を入れる -->
         <tbody>
           <tr>
@@ -35,7 +36,7 @@
         </tbody>
         <div class="row">
             <!-- /users/id/editのリンクを張る↓ -->
-            <a class="col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_21696" href="/users/21696/edit"></a>
+          <%= link_to edit_user(user), class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_21696" %>
         </div>
         <!-- ここまでユーザー情報 -->
         <h2>New book</h2>

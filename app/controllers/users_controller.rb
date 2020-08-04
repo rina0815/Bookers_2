@@ -8,4 +8,8 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
   	@books = @user.books.all
   end
+
+  def edit
+  	@user = current_user
+  end
 end
