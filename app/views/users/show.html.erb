@@ -1,7 +1,9 @@
 <div class="body">
   <div class="container">
+    <p id="notice">
+      <%= notice %>
+    </p>
     <% if @book.errors.any? %>
-      <p id="notice">
         <div id="error_explanation">
           <h3>
             <%= pluralize(@book.errors.count, "error") %> error prohibited this obj from being saved:
