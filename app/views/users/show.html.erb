@@ -18,28 +18,29 @@
     <div class="row">
       <div class="col-xs-3">
         <h2>User info</h2>
-        <!-- user画像の情報を入れる -->
-        <tbody>
-          <tr>
-            <th>name</th>
-            <th>
-              <!-- 名前のユーザー情報入れる -->
-            </th>
-          </tr>
-          <tr>
-            <th>introduction</th>
-            <th>
-              <!-- ユーザーの編集したものの投稿先 -->
-            </th>
-          </tr>
-        </tbody>
+        <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+        <table class="table">
+          <tbody>
+            <tr></tr>
+            <tr>
+              <th>name</th>
+              <th>
+                <%= @user.name %>
+              </th>
+            </tr>
+            <tr>
+              <th>introduction</th>
+              <th>
+                <%= @user.introduction %>
+              </th>
+            </tr>
+          </tbody>
+        </table>
         <div class="row">
-            <!-- /users/id/editのリンクを張る↓ -->
-            <a class="col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_21696" href="/users/21696/edit"></a>
+          <%= link_to " ", edit_user_path(@user), class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
         </div>
-        <!-- ここまでユーザー情報 -->
-        <h2>New book</h2>
         <!-- ここからが投稿ページ -->
+        <h2>New book</h2>
         <%= form_for @book, :url => {controller: "books", action: "create"} do |f| %><!-- form_for記入 -->
           <div class="field row">
             <label for="book_title">Title</label>
@@ -70,8 +71,7 @@
             <% @books.each do |book| %>
               <tr>
                 <td><!-- userアイコン&rリンク挿入 -->
-                  <img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg" alt="No image icon">
-                </td>
+                  <%= link_to(attachment_image_tag book.user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.jpg",size:'40x40') %>
                 <td>
                   <%= link_to book.title, book_path(book) %><!-- title -->
                 </td>
